@@ -70,6 +70,7 @@ height: 25px;
 text-align:center;
 font-family: 'Reenie Beanie', cursive; /*Reenie Beanie is available through Google Webfonts http://code.google.com/webfonts/specimen/Reenie+Beanie*/
 font-size:1.3em;
+max-width:200px;
 color:#454f40;
 letter-spacing:0.09em;
 }
