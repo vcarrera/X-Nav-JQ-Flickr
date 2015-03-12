@@ -1,10 +1,10 @@
 $(document).ready(function() {
+    var apiflickr='http://api.flickr.com/services/feeds/photos_public.gne?tags=';
     $('#search').click(function(){
         $('#images').html('');
-        $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags=' +
-            $('#tag').val() + '&tagmode=any&format=json&jsoncallback=?', function(data){
-	        $.each(data.items, function(i,item) {
-                $('#images').append('<img src="' + item.media.m + '"/>');
+        $.getJSON( apiflickr+$('#tag').val() + '&tagmode=any&format=json&jsoncallback=?', function(d){
+	        $.each(d.items, function(i,item) {
+                $('#images').append('<figure><img src="' + item.media.m + '"/><figcaption>Nice old tree</figcaption></figure>');
 	        });
         });
     });
