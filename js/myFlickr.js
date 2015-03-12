@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('#images').html('');
         $.getJSON( apiflickr+$('#tag').val() + '&tagmode=any&format=json&jsoncallback=?', function(d){
 	        $.each(d.items, function(i,item) {
-                $('#images').append('<figure><img src=' + item.media.m + '/><figcaption>'+item.title+'</figcaption></figure>');
+                $('#images').append('<figure class="col-lg-4"><img src=' + item.media.m + '/><figcaption>'+item.title.substring(0, 11)+'</figcaption></figure>');
 	        });
         });
     });
